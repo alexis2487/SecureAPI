@@ -1,10 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using SecureAPI.Models;
 
 namespace SecureAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
+
+
     public class UsersController : ControllerBase
     {
         private static List<User> _users = new List<User>
